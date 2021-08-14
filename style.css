@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.logo {
+  display: inline-flex;
+  width: 150px;
+  height: 6.5vw;
+  position: absolute;
+  left: 30px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+header {
+      --text: #f4f4f4;
+      --text-inverse: #000;
+  --background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 250ms ease-in;
+  background: var(--background);
+  color: var(--text);
+  box-shadow: 0 3px 20px rgba(84, 83, 83, 0.2);
+}
+
+.navi-list {
+  display: flex;
+  margin-left: 30px;
+  margin: 0;
+  padding: 30px 10%;
+}
+.navi-item {
+  list-style: none;
+  padding: 10px;
+  margin-right: 30px;
+}
+.navi-links {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--text);
+  padding: 10px;
+}
+.navi-links::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #95d3f5;
+  width: 0%;
+  margin: auto;
+  transition: 0.4s ease-in-out 0s;
+}
+.navi-links:hover::after {
+  width: 100%;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+}
+section h1 {
+  background: linear-gradient(to right, #ffb7c5, #bfbfe6);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-left: 30px;
+  margin-top: 50px;
+  font-size: 50px;
+}
+#Home {
+  background: url(https://images8.alphacoders.com/868/thumb-1920-868850.jpg);
+  background-repeat: no-repeat;
+  color: aliceblue;
+}
+#About {
+  background-color: antiquewhite;
+}
+#Contact {
+  background-color: darkgoldenrod;
+}
+.nav-scrolled {
+  --text: #000;
+  --text-inverse: #333;
+  --background: antiquewhite;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+.nav-scrolled-contact{
+      --text: lightblue;
+      --text-inverse: #333;
+      --background: darkgoldenrod;
+      box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+.bubble {
+  position: absolute;
+  z-index: -2;
+  background: #ff5500;
+}
+.Fullpage {
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  height: 100vh;
+}
